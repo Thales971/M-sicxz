@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Footer } from './components/Footer';
 import { Header } from './components/Header';
 import { Form } from './components/ReactForm';
 import { ArtistDetails } from './pages/ArtistDetails';
@@ -25,6 +26,7 @@ function App() {
             }
           />
         </Routes>
+        <Footer />
       </div>
     </BrowserRouter>
   );
