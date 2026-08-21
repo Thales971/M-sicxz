@@ -15,7 +15,7 @@ export function Header() {
   const closeMenu = () => setIsMenuOpen(false);
 
   return (
-    <header className="fixed left-0 top-0 z-50 w-full bg-linear-to-b from-black/85 via-black/45 to-transparent px-4 py-4 backdrop-blur-[2px] sm:px-8 sm:py-6">
+    <header className="fixed top-0 left-0 w-full z-50 px-8 py-6 flex items-center justify-between gap-4 bg-gradient-to-b from-black/80 via-black/40 to-transparent backdrop-blur-[2px]">
       <div className="flex items-center space-x-2">
         <Link to="/" onClick={closeMenu} className="cursor-pointer" aria-label="Musicxzz - inicio">
           <img
@@ -37,7 +37,7 @@ export function Header() {
       </button>
 
       <nav
-        className={`${isMenuOpen ? 'flex' : 'hidden'} absolute left-4 right-4 top-20 flex-col gap-2 rounded-2xl border border-[#51AFF7]/25 bg-[#0B1E30]/95 p-3 shadow-2xl sm:static sm:flex sm:flex-row sm:items-center sm:gap-1 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
+        className={`${isMenuOpen ? 'flex' : 'hidden'} absolute left-4 right-4 top-20 flex-col gap-2 rounded-2xl border border-[#51AFF7]/25 p-3 shadow-2xl sm:static sm:flex sm:flex-row sm:items-center sm:gap-1 sm:border-0 sm:bg-transparent sm:p-0 sm:shadow-none`}
       >
         {links.map(link => (
           <NavLink
@@ -45,7 +45,7 @@ export function Header() {
             to={link.to}
             onClick={closeMenu}
             className={({ isActive }) =>
-              `rounded-lg px-4 py-3 text-base font-semibold transition-colors ${isActive ? 'bg-[#FFD900] text-[#0B1E30]' : 'text-white hover:bg-[#51AFF7]/15'}`
+              `rounded-lg px-4 py-3 text-base font-semibold transition-colors ${isActive ? ' text-white-900' : 'text-white hover:bg-[#51AFF7]/15'}`
             }
           >
             {link.label}
