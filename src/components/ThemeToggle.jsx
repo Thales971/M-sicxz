@@ -2,7 +2,12 @@ import { useEffect, useState } from 'react';
 import { FiMoon, FiSun } from 'react-icons/fi';
 
 export function ThemeToggle() {
-  const [isDark, setIsDark] = useState(() => localStorage.getItem('musicxzz-theme') !== 'light');
+  const [isDark, setIsDark] = useState(() => {
+    const savedTheme = localStorage.getItem('musicxzz-theme');
+    return savedTheme
+      ? savedTheme === 'dark'
+      : window.matchMedia('(prefers-color-scheme: dark)').matches;
+  });
 
   useEffect(() => {
     document.documentElement.classList.toggle('dark', isDark);
@@ -15,6 +20,7 @@ export function ThemeToggle() {
       type="button"
       onClick={() => setIsDark(current => !current)}
       aria-label={isDark ? 'Ativar modo claro' : 'Ativar modo escuro'}
+      title={isDark ? 'Ativar modo claro' : 'Ativar modo escuro'}
       className="rounded-lg border border-[#0B1E30]/20 p-3 text-[#0B1E30] transition hover:border-[#51AFF7] hover:bg-[#51AFF7]/15 dark:border-white/20 dark:text-white"
     >
       {isDark ? <FiSun size={18} /> : <FiMoon size={18} />}

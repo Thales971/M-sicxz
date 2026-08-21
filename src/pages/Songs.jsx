@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react';
 import { FiHeadphones, FiHeart } from 'react-icons/fi';
+import { useSearchParams } from 'react-router-dom';
 import { GenreFilter } from '../components/GenreFilter';
 import { SearchBar } from '../components/SearchBar';
 import { SongCard } from '../components/SongCard';
@@ -7,8 +8,9 @@ import { generos } from '../data/genres';
 import { musicas } from '../data/songs';
 
 export function Songs() {
+  const [searchParams] = useSearchParams();
   const [search, setSearch] = useState('');
-  const [genre, setGenre] = useState('todos');
+  const [genre, setGenre] = useState(searchParams.get('genero') || 'todos');
   const [favorites, setFavorites] = useState([]);
 
   const filteredSongs = useMemo(

@@ -16,3 +16,23 @@ body {
 body.dark-mode {
   background: #0b1e30;
 }
+
+@keyframes carousel {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-carousel {
+  display: flex;
+  width: max-content;
+  animation: carousel 25s linear infinite;
+}
+
+.animate-carousel:hover {
+  animation-play-state: paused;
+}

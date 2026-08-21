@@ -8,15 +8,8 @@ import {
   FiTwitter,
 } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
-
-const navigationLinks = [
-  { to: '/', label: 'Início' },
-  { to: '/artistas', label: 'Artistas' },
-  { to: '/musicas', label: 'Músicas' },
-  { to: '/formulario', label: 'Descobrir artista' },
-];
-
-const genres = ['Rock', 'Metal', 'Hip hop', 'Pop', 'MPB'];
+import { generos } from '../data/genres';
+import { navigationLinks } from '../data/navigation';
 
 const socialLinks = [
   { label: 'Instagram', icon: FiInstagram, href: 'https://www.instagram.com/' },
@@ -70,15 +63,17 @@ export function Footer() {
               Gêneros
             </h2>
             <div className="mt-3 flex flex-wrap gap-2">
-              {genres.map(genre => (
-                <Link
-                  key={genre}
-                  to="/musicas"
-                  className="rounded-full border border-[#51AFF7]/30 px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-[#51AFF7] hover:text-[#0B1E30] dark:text-slate-300 dark:hover:text-white"
-                >
-                  {genre}
-                </Link>
-              ))}
+              {generos
+                .filter(genre => genre.value !== 'todos')
+                .map(genre => (
+                  <Link
+                    key={genre}
+                    to={`/musicas?genero=${genre.value}`}
+                    className="rounded-full border border-[#51AFF7]/30 px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-[#51AFF7] hover:text-[#0B1E30] dark:text-slate-300 dark:hover:text-white"
+                  >
+                    {genre.label}
+                  </Link>
+                ))}
             </div>
           </div>
 
@@ -113,7 +108,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 flex flex-col gap-2 border-t border-white/10 pt-4 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Musicxzz. Feito para quem vive música.</p>
+          <p>© {new Date().getFullYear()} Musicxzz. Feito para quem vive música.</p>
           <p className="inline-flex items-center gap-1">
             Criado com <FiHeart className="text-[#FFD900]" size={14} fill="currentColor" /> e boas
             faixas.

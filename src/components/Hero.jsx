@@ -10,21 +10,6 @@ export function Hero() {
       id="inicio"
       className="relative flex min-h-screen w-full flex-col items-start justify-start overflow-hidden bg-slate-100 px-4 pb-16 pt-28 transition-colors dark:bg-[#0B1E30] sm:px-8 md:px-16 md:pt-32"
     >
-      <style>{`
-        @keyframes carousel {
-          0% { transform: translateX(0%); }
-          100% { transform: translateX(-50%); }
-        }
-        .animate-carousel {
-          display: flex;
-          width: max-content;
-          animation: carousel 25s linear infinite;
-        }
-        .animate-carousel:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
-
       <div className="relative z-10 w-full max-w-4xl py-10 sm:py-15">
         <div className="flex flex-col items-start gap-6 px-1 sm:px-5">
           <div className="flex flex-col justify-center">

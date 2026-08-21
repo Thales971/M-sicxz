@@ -1,20 +1,10 @@
 import { z } from 'zod';
+import { generos } from '../data/genres.js';
 import { musicas } from '../data/songs.js';
 
 export const musicasDisponiveis = musicas;
 
-const generosMusicais = [
-  'rock',
-  'pop',
-  'jazz',
-  'eletronica',
-  'mpb',
-  'sertanejo',
-  'hiphop',
-  'rap',
-  'classica',
-  'metal',
-];
+const generosMusicais = generos.filter(({ value }) => value !== 'todos').map(({ value }) => value);
 const musicasIds = musicasDisponiveis.map(({ id }) => id);
 
 export const formSchema = z

@@ -64,7 +64,7 @@ export const artistas = [
     descricao:
       'Banda norte-americana que combina peso, texturas atmosfericas e vocais expressivos.',
     imagem:
-      'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Deftones_live.jpg/960px-Deftones_live.jpg',
     destaque: 'Be Quiet and Drive',
   },
   {
@@ -74,7 +74,7 @@ export const artistas = [
     descricao:
       'Uma das bandas mais influentes do metal, conhecida por riffs poderosos e classicos do genero.',
     imagem:
-      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=85',
+      'https://upload.wikimedia.org/wikipedia/commons/3/3e/Metallica_live_London_2003-12-19.jpg',
     destaque: 'Enter Sandman',
   },
   {
@@ -84,7 +84,7 @@ export const artistas = [
     descricao:
       'Banda de hard rock marcada por guitarras memoraveis, atitude de palco e grandes baladas.',
     imagem:
-      'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Guns_N_Roses_in_concert_in_London_on_1_July_2022_Axl_Rose.jpg/1280px-Guns_N_Roses_in_concert_in_London_on_1_July_2022_Axl_Rose.jpg',
     destaque: "Sweet Child O' Mine",
   },
   {
@@ -94,7 +94,7 @@ export const artistas = [
     descricao:
       'Banda brasileira que aproximou rock, skate punk, rap e reggae em cancoes marcantes.',
     imagem:
-      'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=900&q=85',
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Charlie_Brown_Jr._-_Outubro_2012_%282%29.jpg/960px-Charlie_Brown_Jr._-_Outubro_2012_%282%29.jpg',
     destaque: 'Ceu Azul',
   },
 ];

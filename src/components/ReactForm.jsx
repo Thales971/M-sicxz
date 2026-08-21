@@ -62,6 +62,12 @@ export const Form = () => {
     ? musicasDisponiveis.filter(({ genero }) => genero === generoSelecionado)
     : musicasDisponiveis;
   const musicaSelecionada = musicasDisponiveis.find(({ id }) => id === musicaSelecionadaId);
+  const tiposDeContato = [
+    { value: 'duvida', label: 'Dúvida' },
+    { value: 'sugestao', label: 'Sugestão' },
+    { value: 'elogio', label: 'Elogio' },
+    { value: 'suporte', label: 'Suporte Técnico' },
+  ];
 
   useEffect(() => {
     if (musicaSelecionada && generoSelecionado !== musicaSelecionada.genero) {
@@ -295,45 +301,20 @@ export const Form = () => {
                     </span>
                   </label>
                   <div className="flex flex-col gap-3 py-1">
-                    <label className="inline-flex items-center gap-2 cursor-pointer text-sm sm:text-base hover:text-[#0B1E30]">
-                      <input
-                        {...register('tipoContato')}
-                        type="radio"
-                        value="duvida"
-                        className="w-4 h-4 sm:w-5 sm:h-5 accent-[#51AFF7] cursor-pointer"
-                      />
-                      <span>Dúvida</span>
-                    </label>
-
-                    <label className="inline-flex items-center gap-2 cursor-pointer text-sm sm:text-base hover:text-[#0B1E30]">
-                      <input
-                        {...register('tipoContato')}
-                        type="radio"
-                        value="sugestao"
-                        className="w-4 h-4 sm:w-5 sm:h-5 accent-[#51AFF7] cursor-pointer"
-                      />
-                      <span>Sugestão</span>
-                    </label>
-
-                    <label className="inline-flex items-center gap-2 cursor-pointer text-sm sm:text-base hover:text-[#0B1E30]">
-                      <input
-                        {...register('tipoContato')}
-                        type="radio"
-                        value="elogio"
-                        className="w-4 h-4 sm:w-5 sm:h-5 accent-[#51AFF7] cursor-pointer"
-                      />
-                      <span>Elogio</span>
-                    </label>
-
-                    <label className="inline-flex items-center gap-2 cursor-pointer text-sm sm:text-base hover:text-[#0B1E30]">
-                      <input
-                        {...register('tipoContato')}
-                        type="radio"
-                        value="suporte"
-                        className="w-4 h-4 sm:w-5 sm:h-5 accent-[#51AFF7] cursor-pointer"
-                      />
-                      <span>Suporte Técnico</span>
-                    </label>
+                    {tiposDeContato.map(tipo => (
+                      <label
+                        key={tipo.value}
+                        className="inline-flex items-center gap-2 cursor-pointer text-sm sm:text-base hover:text-[#0B1E30]"
+                      >
+                        <input
+                          {...register('tipoContato')}
+                          type="radio"
+                          value={tipo.value}
+                          className="w-4 h-4 sm:w-5 sm:h-5 accent-[#51AFF7] cursor-pointer"
+                        />
+                        <span>{tipo.label}</span>
+                      </label>
+                    ))}
                   </div>
                   {errors.tipoContato && (
                     <p className="flex items-center gap-1 text-xs text-red-500">
