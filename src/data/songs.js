@@ -86,7 +86,7 @@ export const musicas = [
     genero: 'metal',
     duracao: '4:12',
     imagem:
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=85',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPEXRLubTxvdsGoMlH0AdyV4LrguX8b6R06yaY9U8xPKdFHYHc4UcjQc50&s=10',
     trecho: 'Uma faixa de metal sobre tensao, intensidade e confronto interior.',
     letraUrl: 'https://www.google.com/search?q=Duality+Slipknot+letra',
   },
@@ -99,7 +99,7 @@ export const musicas = [
     genero: 'hiphop',
     duracao: '4:50',
     imagem:
-      'https://images.unsplash.com/photo-1521337581100-8ca9a73a5f79?auto=format&fit=crop&w=700&q=85',
+      'https://cdn-images.dzcdn.net/images/cover/ec3c8ed67427064c70f67e5815b74cef/1900x1900-000000-80-0-0.jpg',
     trecho: 'Uma faixa provocadora, marcada por humor, atitude e flow acelerado.',
     letraUrl: 'https://www.google.com/search?q=Without+Me+Eminem+letra',
   },
@@ -112,7 +112,7 @@ export const musicas = [
     genero: 'rock',
     duracao: '5:08',
     imagem:
-      'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=85',
+      'https://cdn-images.dzcdn.net/images/cover/b0edd62e4e62455aef58a3e60474e2bb/1900x1900-000000-80-0-0.jpg',
     trecho: 'Uma mistura atmosferica de peso e melancolia, essencial para conhecer o Deftones.',
     letraUrl: 'https://www.google.com/search?q=Be+Quiet+and+Drive+Deftones+letra',
   },
@@ -125,7 +125,7 @@ export const musicas = [
     genero: 'metal',
     duracao: '5:31',
     imagem:
-      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=85',
+      'https://cdn-images.dzcdn.net/images/cover/a0ddc4a4ad631066dbb94855e7a18879/1900x1900-000000-81-0-0.jpg',
     trecho: 'Um classico do metal com riff marcante e atmosfera sombria.',
     letraUrl: 'https://www.google.com/search?q=Enter+Sandman+Metallica+letra',
   },
@@ -138,7 +138,7 @@ export const musicas = [
     genero: 'rock',
     duracao: '5:56',
     imagem:
-      'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=85',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_m4OnEV2FlIAVGY7i71RaDE6O13RSCCMGcHuEo_hcJDzDefT87lOCII&s=10',
     trecho: 'Uma balada de rock reconhecida pelo riff de guitarra e refrão memoravel.',
     letraUrl: 'https://www.google.com/search?q=Sweet+Child+O+Mine+letra',
   },
@@ -151,7 +151,7 @@ export const musicas = [
     genero: 'rock',
     duracao: '3:28',
     imagem:
-      'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=700&q=85',
+      'https://akamai.sscdn.co/uploadfile/letras/fotos/5/c/c/0/5cc028230a4ebb459793d9c75caf9fb5.jpg',
     trecho: 'Uma faixa brasileira que combina rock, leveza e uma mensagem de recomeço.',
     letraUrl: 'https://www.google.com/search?q=Ceu+Azul+Charlie+Brown+Jr+letra',
   },
