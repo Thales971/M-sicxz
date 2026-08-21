@@ -59,4 +59,44 @@ export const artistas = [
       'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85',
     destaque: 'Perfect',
   },
+  {
+    id: 'deftones',
+    nome: 'Deftones',
+    genero: 'rock',
+    descricao:
+      'Banda norte-americana que combina peso, texturas atmosfericas e vocais expressivos em uma sonoridade unica.',
+    imagem:
+      'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Be Quiet and Drive',
+  },
+  {
+    id: 'metallica',
+    nome: 'Metallica',
+    genero: 'metal',
+    descricao:
+      'Uma das bandas mais influentes do metal, conhecida por riffs poderosos e grandes classicos do genero.',
+    imagem:
+      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Enter Sandman',
+  },
+  {
+    id: 'guns-n-roses',
+    nome: "Guns N' Roses",
+    genero: 'rock',
+    descricao:
+      'Banda de hard rock marcada por guitarras memoraveis, atitude de palco e grandes baladas.',
+    imagem:
+      'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85',
+    destaque: "Sweet Child O' Mine",
+  },
+  {
+    id: 'charlie-brown-jr',
+    nome: 'Charlie Brown Jr.',
+    genero: 'rock',
+    descricao:
+      'Banda brasileira que aproximou rock, skate punk, rap e reggae em cancoes marcantes.',
+    imagem:
+      'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Ceu Azul',
+  },
 ];
