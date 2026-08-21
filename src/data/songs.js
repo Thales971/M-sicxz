@@ -8,21 +8,21 @@ export const musicas = [
     genero: 'metal',
     duracao: '4:43',
     imagem:
-      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=700&q=85',
+      'https://i.ytimg.com/vi/FzxLFYm1nSM/maxresdefault.jpg',
     trecho: 'Uma faixa intensa sobre conflito, pressao e identidade.',
     letraUrl: 'https://www.google.com/search?q=Psychosocial+Slipknot+letra',
   },
   {
     id: 'lose-yourself-eminem',
-    titulo: 'Lose Yourself',
+    titulo: 'Superman',
     artista: 'Eminem',
     artistaId: 'eminem',
     album: '8 Mile',
     genero: 'hiphop',
     duracao: '5:20',
     imagem:
-      'https://images.unsplash.com/photo-1521337581100-8ca9a73a5f79?auto=format&fit=crop&w=700&q=85',
-    trecho: 'Uma narrativa sobre oportunidade, foco e coragem para seguir em frente.',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeF2eEZEzzkedwIOJx6ZPH8T3z_VqKGpDCE8EFi0bEuIRsbcPxSm5sqVo&s=10',
+    trecho: 'Uma narrativa sobre ser o superman de uma garota bonita.',
     letraUrl: 'https://www.google.com/search?q=Lose+Yourself+Eminem+letra',
   },
   {
@@ -34,7 +34,7 @@ export const musicas = [
     genero: 'rock',
     duracao: '3:07',
     imagem:
-      'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=700&q=85',
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ98H7Qcr5HTlm7jOL_ldy6oDPNY-8KV5x9KK_LDnC--vChAp-ED0uffb4&s=10',
     trecho: 'Uma cancao sobre expectativas, distancia emocional e busca por autenticidade.',
     letraUrl: 'https://www.google.com/search?q=Numb+Linkin+Park+letra',
   },
@@ -47,21 +47,21 @@ export const musicas = [
     genero: 'pop',
     duracao: '3:20',
     imagem:
-      'https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=85',
+      'https://m.media-amazon.com/images/M/MV5BMjEyMTNmNmQtNjFhOS00YmJhLWE4M2EtM2NhZTE2Zjk0ZDhjXkEyXkFqcGc@._V1_.jpg',
     trecho: 'Uma faixa pop eletrizante com clima noturno e nostalgia oitentista.',
     letraUrl: 'https://www.google.com/search?q=Blinding+Lights+The+Weeknd+letra',
   },
   {
     id: 'bohemian-rhapsody-queen',
-    titulo: 'Bohemian Rhapsody',
-    artista: 'Queen',
+    titulo: 'Tipo Madara',
+    artista: 'MHrap',
     artistaId: 'queen',
-    album: 'A Night at the Opera',
-    genero: 'rock',
-    duracao: '5:55',
+    album: 'Tipo Madara',
+    genero: 'rap',
+    duracao: '2:55',
     imagem:
-      'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=700&q=85',
-    trecho: 'Uma composicao epica que transita por balada, opera e rock.',
+      'https://i.ytimg.com/vi/wCMzj9Gzyt0/maxresdefault.jpg',
+    trecho: 'Rap do uchiha mais forte de naruto.',
     letraUrl: 'https://www.google.com/search?q=Bohemian+Rhapsody+Queen+letra',
   },
   {
@@ -73,7 +73,7 @@ export const musicas = [
     genero: 'pop',
     duracao: '4:23',
     imagem:
-      'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=700&q=85',
+      'https://upload.wikimedia.org/wikipedia/pt/thumb/9/9c/Ed_Sheeran_Perfect.jpg/250px-Ed_Sheeran_Perfect.jpg?utm_source=pt.wikipedia.org&utm_campaign=parser&utm_content=thumbnail',
     trecho: 'Uma balada romantica construida com violao e uma melodia delicada.',
     letraUrl: 'https://www.google.com/search?q=Perfect+Ed+Sheeran+letra',
   },
