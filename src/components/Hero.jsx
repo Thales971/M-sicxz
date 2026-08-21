@@ -2,42 +2,48 @@ import { Link } from 'react-router-dom';
 import { MusicCard } from './MusicCard';
 
 const musicas = [
-  {
-    id: 1,
-    titulo: 'Poesia acustica 7',
-    artista: 'MC Hariel, Negra Li, Ducon, MC Kevin o Chris, Chris MC, Matuê, DK 47, Vitão',
-    capa: 'https://akamai.sscdn.co/uploadfile/letras/albuns/4/a/4/f/2466521734384556.jpg',
-  },
-  {
-    id: 2,
-    titulo: 'Be quiet and drive',
-    artista: 'Deftones',
-    capa: 'https://cdn-images.dzcdn.net/images/cover/b0edd62e4e62455aef58a3e60474e2bb/1900x1900-000000-80-0-0.jpg',
-  },
-  {
-    id: 3,
-    titulo: 'So far so fake',
-    artista: 'Pierce the veil',
-    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTquXGwY3PS3n1594zxKdB097DEAs7izphJSvjE1M7RrOly_xKICgt9EKQ&s=10',
-  },
-  {
-    id: 4,
-    titulo: 'Enter sandman',
-    artista: 'Metallica',
-    capa: 'https://cdn-images.dzcdn.net/images/cover/a0ddc4a4ad631066dbb94855e7a18879/1900x1900-000000-81-0-0.jpg',
-  },
-  {
-    id: 5,
-    titulo: 'Sweet Child O Mine',
-    artista: 'Guns and roses',
-    capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_m4OnEV2FlIAVGY7i71RaDE6O13RSCCMGcHuEo_hcJDzDefT87lOCII&s=10',
-  },
-  {
-    id: 6,
-    titulo: 'Céu azul',
-    artista: 'Charlie Brown Jr',
-    capa: 'https://akamai.sscdn.co/uploadfile/letras/fotos/5/c/c/0/5cc028230a4ebb459793d9c75caf9fb5.jpg',
-  },
+     {
+        id: 1,
+        titulo: 'Poesia acustica 7',
+        artista: 'MC Hariel, Negra Li, Ducon, MC Kevin o Chris, Chris MC, Matuê, DK 47, Vitão',
+        capa: 'https://akamai.sscdn.co/uploadfile/letras/albuns/4/a/4/f/2466521734384556.jpg',
+    },
+    {
+        id: 2,
+        titulo: 'Be quiet and drive',
+        artista: 'Deftones',
+        capa: 'https://cdn-images.dzcdn.net/images/cover/b0edd62e4e62455aef58a3e60474e2bb/1900x1900-000000-80-0-0.jpg',
+    },
+    {
+        id: 3,
+        titulo: 'So far so fake',
+        artista: 'Pierce the veil',
+        capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTquXGwY3PS3n1594zxKdB097DEAs7izphJSvjE1M7RrOly_xKICgt9EKQ&s=10',
+    },
+    {
+        id: 4,
+        titulo: 'Enter sandman',
+        artista: 'Metallica',
+        capa: 'https://cdn-images.dzcdn.net/images/cover/a0ddc4a4ad631066dbb94855e7a18879/1900x1900-000000-81-0-0.jpg',
+    },
+    {
+        id: 5,
+        titulo: 'Sweet Child O Mine',
+        artista: 'Guns and roses',
+        capa: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_m4OnEV2FlIAVGY7i71RaDE6O13RSCCMGcHuEo_hcJDzDefT87lOCII&s=10',
+    },
+    {
+        id: 6,
+        titulo: 'Céu azul',
+        artista: 'Charlie Brown Jr',
+        capa: 'https://akamai.sscdn.co/uploadfile/letras/fotos/5/c/c/0/5cc028230a4ebb459793d9c75caf9fb5.jpg',
+    },
+    {
+        id: 7,
+        titulo: 'Tipo Madara',
+        artista: 'MHrap',
+        capa: 'https://i.ytimg.com/vi/wCMzj9Gzyt0/maxresdefault.jpg',
+    },
 ];
 
 // Duplicamos a lista para criar o loop infinito contínuo
