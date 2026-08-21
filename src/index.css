@@ -1,1 +1,18 @@
 @import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: #f1f5f9;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body.dark-mode {
+  background: #0b1e30;
+}

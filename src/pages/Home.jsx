@@ -6,7 +6,7 @@ export function Home() {
   return (
     <>
       <Hero />
-      <section className="bg-white px-4 py-16 text-[#0B1E30] sm:px-6 lg:px-8">
+      <section className="bg-white px-4 py-16 text-[#0B1E30] dark:bg-slate-900 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2">
           <Link
             to="/artistas"
@@ -23,11 +23,11 @@ export function Home() {
           </Link>
           <Link
             to="/musicas"
-            className="group rounded-2xl border border-[#51AFF7]/30 bg-[#51AFF7]/10 p-8 transition hover:-translate-y-1 hover:border-[#51AFF7]"
+            className="group rounded-2xl border border-[#51AFF7]/30 bg-[#51AFF7]/10 p-8 transition hover:-translate-y-1 hover:border-[#51AFF7] dark:text-white"
           >
             <FiHeadphones className="text-[#0B1E30]" size={28} />
             <h2 className="mt-6 text-3xl font-black">Descubra músicas</h2>
-            <p className="mt-3 text-slate-600">
+            <p className="mt-3 text-slate-600 dark:text-slate-300">
               Busque por faixa, filtre por genero e monte sua lista de favoritas.
             </p>
             <span className="mt-6 inline-flex items-center gap-2 font-bold text-[#0B1E30]">

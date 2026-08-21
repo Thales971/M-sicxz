@@ -7,14 +7,13 @@ export const musicas = [
     album: 'All Hope Is Gone',
     genero: 'metal',
     duracao: '4:43',
-    imagem:
-      'https://i.ytimg.com/vi/FzxLFYm1nSM/maxresdefault.jpg',
+    imagem: 'https://i.ytimg.com/vi/FzxLFYm1nSM/maxresdefault.jpg',
     trecho: 'Uma faixa intensa sobre conflito, pressao e identidade.',
     letraUrl: 'https://www.google.com/search?q=Psychosocial+Slipknot+letra',
   },
   {
     id: 'lose-yourself-eminem',
-    titulo: 'Superman',
+    titulo: 'Lose Yourself',
     artista: 'Eminem',
     artistaId: 'eminem',
     album: '8 Mile',
@@ -22,7 +21,7 @@ export const musicas = [
     duracao: '5:20',
     imagem:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeF2eEZEzzkedwIOJx6ZPH8T3z_VqKGpDCE8EFi0bEuIRsbcPxSm5sqVo&s=10',
-    trecho: 'Uma narrativa sobre ser o superman de uma garota bonita.',
+    trecho: 'Uma narrativa sobre oportunidade, foco e coragem para seguir em frente.',
     letraUrl: 'https://www.google.com/search?q=Lose+Yourself+Eminem+letra',
   },
   {
@@ -50,19 +49,6 @@ export const musicas = [
       'https://m.media-amazon.com/images/M/MV5BMjEyMTNmNmQtNjFhOS00YmJhLWE4M2EtM2NhZTE2Zjk0ZDhjXkEyXkFqcGc@._V1_.jpg',
     trecho: 'Uma faixa pop eletrizante com clima noturno e nostalgia oitentista.',
     letraUrl: 'https://www.google.com/search?q=Blinding+Lights+The+Weeknd+letra',
-  },
-  {
-    id: 'bohemian-rhapsody-queen',
-    titulo: 'Tipo Madara',
-    artista: 'MHrap',
-    artistaId: 'queen',
-    album: 'Tipo Madara',
-    genero: 'rap',
-    duracao: '2:55',
-    imagem:
-      'https://i.ytimg.com/vi/wCMzj9Gzyt0/maxresdefault.jpg',
-    trecho: 'Rap do uchiha mais forte de naruto.',
-    letraUrl: 'https://www.google.com/search?q=Bohemian+Rhapsody+Queen+letra',
   },
   {
     id: 'perfect-ed-sheeran',
@@ -154,5 +140,18 @@ export const musicas = [
       'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=700&q=85',
     trecho: 'Uma faixa brasileira que combina rock, leveza e uma mensagem de recomeço.',
     letraUrl: 'https://www.google.com/search?q=Ceu+Azul+Charlie+Brown+Jr+letra',
+  },
+  {
+    id: 'tipo-madara-mhrap',
+    titulo: 'Tipo Madara',
+    artista: 'MHrap',
+    artistaId: 'mhrap',
+    album: 'Tipo Madara',
+    genero: 'hiphop',
+    duracao: '2:55',
+    imagem:
+      'https://yt3.googleusercontent.com/DdsxYDWFA_RzEi2N7Jkf-CegDLoKeWKFYXvoA-7Ne0057IRKwdSRUSqbWh5hvQ2kygBpBsp4XA=s900-c-k-c0x00ffffff-no-rj',
+    trecho: 'Uma faixa de rap geek inspirada na força e na estratégia do universo de Naruto.',
+    letraUrl: 'https://www.google.com/search?q=Tipo+Madara+MHrap+letra',
   },
 ];

@@ -3,6 +3,7 @@ export const generos = [
   { value: 'rock', label: 'Rock' },
   { value: 'metal', label: 'Metal' },
   { value: 'hiphop', label: 'Hip hop' },
+  { value: 'rap', label: 'Rap geek' },
   { value: 'pop', label: 'Pop' },
   { value: 'jazz', label: 'Jazz' },
   { value: 'eletronica', label: 'Eletronica' },

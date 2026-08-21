@@ -13,7 +13,7 @@ export function SearchBar({ value, onChange, placeholder = 'Buscar...' }) {
         value={value}
         onChange={event => onChange(event.target.value)}
         placeholder={placeholder}
-        className="w-full rounded-xl border border-[#51AFF7]/35 bg-white px-12 py-3 text-[#0B1E30] outline-none transition placeholder:text-slate-400 focus:border-[#51AFF7] focus:ring-2 focus:ring-[#51AFF7]/25"
+        className="w-full rounded-xl border border-[#51AFF7]/35 bg-white px-12 py-3 text-[#0B1E30] outline-none transition placeholder:text-slate-400 focus:border-[#51AFF7] focus:ring-2 focus:ring-[#51AFF7]/25 dark:bg-slate-900 dark:text-white"
       />
     </label>
   );

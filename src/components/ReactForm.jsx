@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import {
   FiAlertCircle,
@@ -15,6 +15,7 @@ import {
   FiSend,
   FiUser,
 } from 'react-icons/fi';
+import { generos } from '../data/genres';
 import { formSchema, musicasDisponiveis } from '../schemas/formSchema';
 
 export const Form = () => {
@@ -25,6 +26,7 @@ export const Form = () => {
     register,
     handleSubmit,
     reset,
+    setValue,
     control,
     formState: { errors, isSubmitting },
   } = useForm({
@@ -61,17 +63,23 @@ export const Form = () => {
     : musicasDisponiveis;
   const musicaSelecionada = musicasDisponiveis.find(({ id }) => id === musicaSelecionadaId);
 
+  useEffect(() => {
+    if (musicaSelecionada && generoSelecionado !== musicaSelecionada.genero) {
+      setValue('musicaFavorita', '', { shouldValidate: true });
+    }
+  }, [generoSelecionado, musicaSelecionada, setValue]);
+
   return (
     <div className="w-full max-w-295 mx-auto px-4 py-8">
-      <div className="bg-white rounded-3xl shadow-2xl border border-[#51AFF7]/35 p-8 sm:p-10">
+      <div className="rounded-3xl border border-[#51AFF7]/35 bg-white p-5 shadow-2xl transition-colors dark:bg-slate-900 sm:p-10">
         {/* Título do Formulário */}
         <div className="flex items-center justify-center gap-3 mb-7">
           <FiMusic className="text-[#51AFF7] text-3xl sm:text-4xl" />
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-[#0B1E30] tracking-tight">
+          <h1 className="text-3xl font-extrabold tracking-tight text-[#0B1E30] dark:text-white sm:text-4xl">
             Descubra Seu Artista Favorito
           </h1>
         </div>
-        <p className="mx-auto mb-8 max-w-2xl text-center text-[#0B1E30]/70">
+        <p className="mx-auto mb-8 max-w-2xl text-center text-[#0B1E30]/70 dark:text-slate-300">
           Conte um pouco sobre seus gostos musicais e encontre a banda ou o artista que combina com
           você.
         </p>
@@ -81,14 +89,14 @@ export const Form = () => {
             <div className="w-20 h-20 bg-[#FFD900] text-[#0B1E30] rounded-full flex items-center justify-center mx-auto border border-[#FFD900] shadow-sm">
               <FiCheckCircle size={44} />
             </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
+            <h2 className="text-2xl font-bold text-gray-800 dark:text-white sm:text-3xl">
               Mensagem Enviada com Sucesso!
             </h2>
-            <p className="text-sm sm:text-base text-gray-500">
+            <p className="text-sm text-gray-500 dark:text-slate-300 sm:text-base">
               Obrigado pelo seu feedback! Entraremos em contato em breve.
             </p>
 
-            <div className="bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 text-sm font-mono text-gray-800 max-h-64 overflow-y-auto">
+            <div className="max-h-64 overflow-y-auto rounded-2xl border border-gray-200 bg-gray-50 p-6 text-left font-mono text-sm text-gray-800 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100">
               <pre>{JSON.stringify(submittedData, null, 2)}</pre>
             </div>
 
@@ -104,7 +112,7 @@ export const Form = () => {
           <form
             onSubmit={handleSubmit(onSubmit)}
             noValidate
-            className="text-sm sm:text-base text-gray-700 space-y-6"
+            className="space-y-6 text-sm text-gray-700 dark:text-slate-200 sm:text-base"
           >
             {/* Grid de 2 Colunas */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-5">
@@ -121,6 +129,7 @@ export const Form = () => {
                   <div className="relative">
                     <input
                       {...register('nome')}
+                      id="nome"
                       type="text"
                       placeholder="Digite seu nome"
                       className={`w-full px-4 py-3 bg-white border rounded-xl text-sm sm:text-base text-gray-800 placeholder-gray-400 focus:outline-none transition ${
@@ -152,6 +161,7 @@ export const Form = () => {
                     </div>
                     <input
                       {...register('email')}
+                      id="email"
                       type="email"
                       placeholder="exemplo@email.com"
                       className={`w-full pl-11 pr-4 py-3 bg-white border rounded-xl text-sm sm:text-base text-gray-800 placeholder-gray-400 focus:outline-none transition ${
@@ -183,6 +193,7 @@ export const Form = () => {
                     </div>
                     <input
                       {...register('telefone')}
+                      id="telefone"
                       type="tel"
                       placeholder="(11) 98765-4321"
                       className={`w-full pl-11 pr-4 py-3 bg-white border rounded-xl text-sm sm:text-base text-gray-800 placeholder-gray-400 focus:outline-none transition ${
@@ -210,22 +221,21 @@ export const Form = () => {
                   </label>
                   <select
                     {...register('generoMusical')}
-                    className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm sm:text-base text-gray-800 focus:bg-white focus:outline-none transition cursor-pointer ${
+                    id="generoMusical"
+                    className={`w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border rounded-xl text-sm sm:text-base text-gray-800 dark:text-white focus:bg-white dark:focus:bg-slate-700 focus:outline-none transition cursor-pointer ${
                       errors.generoMusical
                         ? 'border-red-500'
                         : 'border-gray-300 focus:border-[#FFD900]'
                     }`}
                   >
                     <option value="">Selecione um gênero</option>
-                    <option value="rock">Rock</option>
-                    <option value="pop">Pop</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="eletronica">Eletrônica</option>
-                    <option value="mpb">MPB</option>
-                    <option value="sertanejo">Sertanejo</option>
-                    <option value="hiphop">Hip Hop/Rap</option>
-                    <option value="classica">Música Clássica</option>
-                    <option value="metal">Metal</option>
+                    {generos
+                      .filter(({ value }) => value !== 'todos')
+                      .map(genero => (
+                        <option key={genero.value} value={genero.value}>
+                          {genero.label}
+                        </option>
+                      ))}
                   </select>
                   {errors.generoMusical && (
                     <p className="flex items-center gap-1 text-xs text-red-500 mt-1">
@@ -245,7 +255,8 @@ export const Form = () => {
                   </label>
                   <select
                     {...register('musicaFavorita')}
-                    className={`w-full px-4 py-3 bg-gray-50 border rounded-xl text-sm sm:text-base text-gray-800 focus:bg-white focus:outline-none transition cursor-pointer ${
+                    id="musicaFavorita"
+                    className={`w-full px-4 py-3 bg-gray-50 dark:bg-slate-800 border rounded-xl text-sm sm:text-base text-gray-800 dark:text-white focus:bg-white dark:focus:bg-slate-700 focus:outline-none transition cursor-pointer ${
                       errors.musicaFavorita
                         ? 'border-red-500'
                         : 'border-gray-300 focus:border-[#FFD900]'
@@ -357,7 +368,8 @@ export const Form = () => {
                     {...register('mensagem')}
                     rows={5}
                     placeholder="Digite sua mensagem, dúvida, sugestão ou elogio..."
-                    className={`w-full px-4 py-2.5 bg-white border rounded-xl text-sm sm:text-base text-gray-800 placeholder-gray-400 focus:outline-none transition resize-none ${
+                    id="mensagem"
+                    className={`w-full resize-none rounded-xl border bg-white px-4 py-2.5 text-sm text-gray-800 placeholder-gray-400 transition focus:outline-none dark:bg-slate-800 dark:text-white sm:text-base ${
                       errors.mensagem ? 'border-red-500' : 'border-gray-300 focus:border-[#51AFF7]'
                     }`}
                   />

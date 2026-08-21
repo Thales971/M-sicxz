@@ -30,21 +30,21 @@ export function Songs() {
   };
 
   return (
-    <main className="min-h-screen bg-[#0B1E30] px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-slate-100 px-4 pb-20 pt-32 transition-colors dark:bg-[#0B1E30] sm:px-6 lg:px-8">
       <section className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
           <p className="mb-3 flex items-center gap-2 text-sm font-bold uppercase tracking-[0.2em] text-[#51AFF7]">
             <FiHeadphones /> Biblioteca de faixas
           </p>
-          <h1 className="text-4xl font-black tracking-tight text-white sm:text-6xl">
+          <h1 className="text-4xl font-black tracking-tight text-[#0B1E30] dark:text-white sm:text-6xl">
             Encontre sua próxima música.
           </h1>
-          <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg">
+          <p className="mt-5 text-base leading-7 text-slate-600 dark:text-slate-300 sm:text-lg">
             Pesquise por faixa, artista ou álbum, filtre por genero e guarde suas descobertas
             favoritas.
           </p>
         </div>
-        <div className="mt-10 grid gap-4 rounded-2xl border border-[#51AFF7]/25 bg-black/20 p-4 sm:grid-cols-[1fr_auto] sm:p-5">
+        <div className="mt-10 grid gap-4 rounded-2xl border border-[#51AFF7]/25 bg-white/70 p-4 dark:bg-black/20 sm:grid-cols-[1fr_auto] sm:p-5">
           <SearchBar
             value={search}
             onChange={setSearch}
@@ -52,7 +52,7 @@ export function Songs() {
           />
           <GenreFilter value={genre} onChange={setGenre} genres={generos} />
         </div>
-        <div className="mt-6 flex items-center gap-2 text-sm text-slate-300">
+        <div className="mt-6 flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300">
           <FiHeart className="text-[#FFD900]" /> {favorites.length} favorita(s)
         </div>
         {filteredSongs.length > 0 ? (
@@ -67,7 +67,7 @@ export function Songs() {
             ))}
           </div>
         ) : (
-          <p className="mt-10 rounded-2xl border border-[#51AFF7]/25 bg-white/5 p-8 text-center text-slate-300">
+          <p className="mt-10 rounded-2xl border border-[#51AFF7]/25 bg-white p-8 text-center text-slate-600 dark:bg-white/5 dark:text-slate-300">
             Nenhuma música encontrada. Tente outro termo ou genero.
           </p>
         )}

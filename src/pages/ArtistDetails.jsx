@@ -10,7 +10,7 @@ export function ArtistDetails() {
 
   if (!artist) {
     return (
-      <main className="min-h-screen bg-[#0B1E30] px-4 pb-20 pt-32 text-center text-white">
+      <main className="min-h-screen bg-slate-100 px-4 pb-20 pt-32 text-center text-[#0B1E30] dark:bg-[#0B1E30] dark:text-white">
         <h1 className="text-3xl font-black">Artista não encontrado</h1>
         <Link to="/artistas" className="mt-6 inline-flex text-[#51AFF7]">
           Voltar para artistas
@@ -20,7 +20,7 @@ export function ArtistDetails() {
   }
 
   return (
-    <main className="min-h-screen bg-[#0B1E30] px-4 pb-20 pt-32 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-slate-100 px-4 pb-20 pt-32 transition-colors dark:bg-[#0B1E30] sm:px-6 lg:px-8">
       <section className="mx-auto max-w-7xl">
         <Link
           to="/artistas"
@@ -38,8 +38,12 @@ export function ArtistDetails() {
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-[#51AFF7]">
               {artist.genero}
             </p>
-            <h1 className="mt-3 text-5xl font-black text-white sm:text-7xl">{artist.nome}</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">{artist.descricao}</p>
+            <h1 className="mt-3 text-5xl font-black text-[#0B1E30] dark:text-white sm:text-7xl">
+              {artist.nome}
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-600 dark:text-slate-300">
+              {artist.descricao}
+            </p>
             <div className="mt-8 rounded-2xl border border-[#51AFF7]/25 bg-white/5 p-5 text-slate-200">
               <strong className="text-[#FFD900]">Por onde começar:</strong> ouca {artist.destaque} e
               explore a selecao abaixo.
@@ -57,13 +61,15 @@ export function ArtistDetails() {
                 href={song.letraUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl border border-[#51AFF7]/25 bg-white p-5 transition hover:-translate-y-1 hover:border-[#51AFF7]"
+                className="rounded-2xl border border-[#51AFF7]/25 bg-white p-5 transition hover:-translate-y-1 hover:border-[#51AFF7] dark:bg-slate-900"
               >
                 <p className="text-xs font-bold uppercase tracking-widest text-[#51AFF7]">
                   {song.album} · {song.duracao}
                 </p>
                 <h3 className="mt-2 text-xl font-black text-[#0B1E30]">{song.titulo}</h3>
-                <p className="mt-3 text-sm leading-6 text-slate-600">{song.trecho}</p>
+                <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+                  {song.trecho}
+                </p>
               </a>
             ))}
           </div>

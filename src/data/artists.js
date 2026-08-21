@@ -25,8 +25,7 @@ export const artistas = [
     genero: 'rock',
     descricao:
       'Grupo que aproximou rock, eletronica e hip hop em uma sonoridade marcante para varias geracoes.',
-    imagem:
-      'https://segredosdomundo.r7.com/wp-content/uploads/2017/07/linkin-park.jpg',
+    imagem: 'https://segredosdomundo.r7.com/wp-content/uploads/2017/07/linkin-park.jpg',
     destaque: 'Numb',
   },
   {
@@ -40,14 +39,13 @@ export const artistas = [
     destaque: 'Blinding Lights',
   },
   {
-    id: 'queen',
+    id: 'mhrap',
     nome: 'MHrap',
     genero: 'rap',
-    descricao:
-      'Cantor recente de rap de animes, muito conhecido na midia de musicas de anime.',
+    descricao: 'Cantor recente de rap de animes, muito conhecido na midia de musicas de anime.',
     imagem:
       'https://yt3.googleusercontent.com/DdsxYDWFA_RzEi2N7Jkf-CegDLoKeWKFYXvoA-7Ne0057IRKwdSRUSqbWh5hvQ2kygBpBsp4XA=s900-c-k-c0x00ffffff-no-rj',
-    destaque: 'Tipo madara',
+    destaque: 'Tipo Madara',
   },
   {
     id: 'ed-sheeran',
@@ -58,5 +56,45 @@ export const artistas = [
     imagem:
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6clQ9fFhc4EyZwQJ4IxtMJvCYMW2Z1MnpW0EpTGKhBTv0Ed5e89tCdYg1&s=10',
     destaque: 'Perfect',
+  },
+  {
+    id: 'deftones',
+    nome: 'Deftones',
+    genero: 'rock',
+    descricao:
+      'Banda norte-americana que combina peso, texturas atmosfericas e vocais expressivos.',
+    imagem:
+      'https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Be Quiet and Drive',
+  },
+  {
+    id: 'metallica',
+    nome: 'Metallica',
+    genero: 'metal',
+    descricao:
+      'Uma das bandas mais influentes do metal, conhecida por riffs poderosos e classicos do genero.',
+    imagem:
+      'https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Enter Sandman',
+  },
+  {
+    id: 'guns-n-roses',
+    nome: "Guns N' Roses",
+    genero: 'rock',
+    descricao:
+      'Banda de hard rock marcada por guitarras memoraveis, atitude de palco e grandes baladas.',
+    imagem:
+      'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=900&q=85',
+    destaque: "Sweet Child O' Mine",
+  },
+  {
+    id: 'charlie-brown-jr',
+    nome: 'Charlie Brown Jr.',
+    genero: 'rock',
+    descricao:
+      'Banda brasileira que aproximou rock, skate punk, rap e reggae em cancoes marcantes.',
+    imagem:
+      'https://images.unsplash.com/photo-1524650359799-842906ca1c06?auto=format&fit=crop&w=900&q=85',
+    destaque: 'Ceu Azul',
   },
 ];

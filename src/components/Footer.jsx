@@ -26,7 +26,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-[#51AFF7]/25 bg-[#0B1E30] text-white">
+    <footer className="border-t border-[#51AFF7]/25 bg-white text-[#0B1E30] transition-colors dark:bg-[#0B1E30] dark:text-white">
       <div className="mx-auto max-w-7xl px-4 py-9 sm:px-6 lg:px-8">
         <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
           <div className="max-w-sm">
@@ -36,7 +36,7 @@ export function Footer() {
               </span>
               <span className="text-xl font-black tracking-tight">Musicxzz</span>
             </Link>
-            <p className="mt-3 text-sm leading-6 text-slate-400">
+            <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Um espaço para encontrar artistas, explorar novas faixas e guardar as músicas que
               fazem sentido para você.
             </p>
@@ -57,7 +57,7 @@ export function Footer() {
                 <Link
                   key={link.to}
                   to={link.to}
-                  className="text-sm text-slate-300 transition hover:text-[#51AFF7]"
+                  className="text-sm text-slate-600 transition hover:text-[#51AFF7] dark:text-slate-300"
                 >
                   {link.label}
                 </Link>
@@ -74,7 +74,7 @@ export function Footer() {
                 <Link
                   key={genre}
                   to="/musicas"
-                  className="rounded-full border border-[#51AFF7]/30 px-3 py-1.5 text-xs font-semibold text-slate-300 transition hover:border-[#51AFF7] hover:text-white"
+                  className="rounded-full border border-[#51AFF7]/30 px-3 py-1.5 text-xs font-semibold text-slate-600 transition hover:border-[#51AFF7] hover:text-[#0B1E30] dark:text-slate-300 dark:hover:text-white"
                 >
                   {genre}
                 </Link>
@@ -86,12 +86,12 @@ export function Footer() {
             <h2 className="text-sm font-black uppercase tracking-[0.18em] text-[#FFD900]">
               Fique por dentro
             </h2>
-            <p className="mt-3 text-sm leading-6 text-slate-400">
+            <p className="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400">
               Receba novidades sobre artistas e novas descobertas musicais.
             </p>
             <a
               href="mailto:oi@musicxzz.com"
-              className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#51AFF7]"
+              className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-[#0B1E30] hover:text-[#51AFF7] dark:text-white"
             >
               <FiMail className="text-[#51AFF7]" /> oi@musicxzz.com
             </a>
